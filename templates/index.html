@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" /> 
+  <title>Programming Job Finder</title>
+</head>
+<body>
+  <body>
+    <header>
+        <div class="title-bar-container">
+            <div class="title_bar">
+                <a href="/">Programming Job Finder</a>
+            </div>
+        </div>
+
+        <div class="search_job">
+            <h1 class="title-ani">Are you looking for a job?</h1>
+            <form class="search_job-form" action="/report">
+                <input type="text" class="search_job-text" placeholder="Searching Job" name="word" />
+                <input type="submit" class="search_job-submit" value="&#xf002;">
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="description flex-center">
+            <h1>Search jobs!</h1>
+            <h3>Do you want to be programmer?</h3>
+            <h3>Let's find programming job!</h3>
+        </div>
+        <div class="where-info flex-center">
+            <p><span class="where-info__border">Programming Job Finder</span> has infomation</p>
+            <p>from <a href="https://weworkremotely.com/" target="_black" class="where-info__blue">weworkremotely</a>,
+                <a href="https://remoteok.io/" target="_black" class="where-info__blue">remoteok</a>
+                and <a href="https://stackoverflow.com/jobs" target="_black" class="where-info__blue">stackoverflow</a>
+            </p>
+        </div>
+        <div class="aphorism flex-center">
+            <h1>"Well begun is half done"</h1>
+            <p>-Aristoteles</p>
+        </div>
+    </main>
+    <footer>
+        <div class="copy">
+            <p>Copyright © 2021 Kari</p>
+            <p class="copy__email">Email : kari_578@naver.com</p>
+        </div>
+    </footer>
+</body>
+<script src=" https://kit.fontawesome.com/aea9b7ed9f.js" crossorigin="anonymous"></script>
+</body>
+</html>
