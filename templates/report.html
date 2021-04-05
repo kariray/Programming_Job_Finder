@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" /> 
+    <title>Programming Job Finder | Job Report</title>
+</head>
+
+<body>
+    <div class="title-bar-container">
+        <div class="title_bar">
+            <a href="/">Programming Job Finder</a>
+        </div>
+    </div>
+
+    <div class="search_job">
+        <h1>Are you looking for a job?</h1>
+        <form class="search_job-form" action="/report">
+            <input type="text" class="search_job-text" placeholder="Searching Job" name="word"/>
+            <input type="submit" class="search_job-submit" value="&#xf002;">
+        </form>
+    </div>
+    <main>
+        <div class="total-job">
+            <span class="total-job__title"><span class="total-job__title-color">{{resultsNumber}}</span> {{searchingBy}} jobs found.</span>
+            <a href="/export?word={{searchingBy}}" class="total-job__title-s">
+                <span class="total-job__title-color icon-margin">
+                    <i class="fas fa-file-csv fa-lg"></i>
+                </span>Export <span class="total-job__title-color">CSV</span>
+            </a>
+        </div>
+      {% for i in jobs %}
+        <div class="info-job">
+            <hr>
+            <div class="info-job__content">
+                <div class="info-job__content__img">
+                  {% if i.img_url != None: %}
+                    <img
+                        src="{{i.img_url}}" />
+                  {% endif %}
+                </div>
+                <div class="info-job-content__JC">
+                    <span class="info-job-content__JC__job">{{i.title}}</span>
+                    <span class="info-job-content__JC__company">{{i.company}}</span>
+                </div>
+                <a href="{{i.url}}" class="info-job__content__a" target="_black">Apply</a>
+            </div>
+        </div>
+      {% endfor %}
+    </main>
+    <footer>
+        <div class="copy">
+            <p>Copyright © 2021 Kari</p>
+            <p class="copy__email">Email : kari_578@naver.com</p>
+        </div>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/aea9b7ed9f.js" crossorigin="anonymous"></script>
+
+</html>
