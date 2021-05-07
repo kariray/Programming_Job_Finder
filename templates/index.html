@@ -5,7 +5,6 @@
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" /> 
   <title>Programming Job Finder</title>
 </head>
-<body>
   <body>
     <header>
         <div class="title-bar-container">
@@ -13,7 +12,7 @@
                 <a href="/">Programming Job Finder</a>
             </div>
         </div>
-
+        <div id="loading" class="loader hide"></div>
         <div class="search_job">
             <h1 class="title-ani">Are you looking for a job?</h1>
             <form class="search_job-form" action="/report">
@@ -48,5 +47,4 @@
     </footer>
 </body>
 <script src=" https://kit.fontawesome.com/aea9b7ed9f.js" crossorigin="anonymous"></script>
-</body>
 </html>
